@@ -1,19 +1,13 @@
 package packagejdbc;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 public class GetDataConfig {
@@ -64,7 +58,7 @@ public class GetDataConfig {
 		// get value from file config.xml
 		try {
 			// init doc
-			File fxml = new File("bin/config/config.xml");
+			File fxml = new File("config/config.xml");
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbFactory.newDocumentBuilder();
 			Document doc = db.parse(fxml);
